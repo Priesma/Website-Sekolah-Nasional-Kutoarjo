@@ -1,0 +1,128 @@
+Project tree for c:\laragon\www\Website-Sekolah-Nasional-Kutoarjo-main\Website-Sekolah-Nasional-Kutoarjo-main
+
+Root
+├── artisan
+├── composer.json
+├── package.json
+├── phpunit.xml
+├── README.md
+├── TODO.md
+├── vite.config.js
+├── app/
+│   ├── Filament/
+│   │   └── Resources/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   ├── Requests/
+│   │   └── Controller.php
+│   ├── Models/
+│   │   ├── Admin.php
+│   │   ├── AlumniReview.php
+│   │   ├── Fasilitas.php
+│   │   ├── Galeri.php
+│   │   ├── Guru.php
+│   │   ├── Hero.php
+│   │   ├── Kegiatan.php
+│   │   ├── Kontak.php
+│   │   ├── Misi.php
+│   │   ├── Mitra.php
+│   │   ├── ProfilSekolah.php
+│   │   ├── Sejarah.php
+│   │   ├── Staf.php
+│   │   ├── User.php
+│   │   ├── Visi.php
+│   │   └── Yayasan.php
+│   └── Providers/
+│       └── AppServiceProvider.php
+├── bootstrap/
+│   ├── app.php
+│   └── cache/
+│       ├── packages.php
+│       └── services.php
+├── config/
+│   ├── app.php
+│   ├── auth.php
+│   ├── cache.php
+│   ├── database.php
+│   ├── filesystems.php
+│   ├── logging.php
+│   ├── mail.php
+│   ├── queue.php
+│   ├── sanctum.php
+│   ├── services.php
+│   └── session.php
+├── database/
+│   ├── database.sqlite
+│   ├── factories/
+│   │   ├── AlumniReviewFactory.php
+│   │   ├── GaleriFactory.php
+│   │   ├── GuruFactory.php
+│   │   ├── KegiatanFactory.php
+│   │   ├── MitraFactory.php
+│   │   ├── StafFactory.php
+│   │   └── UserFactory.php
+│   ├── migrations/
+│   │   ├── 0001_01_01_000000_create_users_table.php
+│   │   ├── 0001_01_01_000001_create_cache_table.php
+│   │   ├── 0001_01_01_000002_create_jobs_table.php
+│   │   ├── 2024_10_01_000000_create_admin_table.php
+│   │   ├── 2024_10_01_000001_create_profil_sekolah_table.php
+│   │   ├── 2024_10_01_000002_create_sejarah_table.php
+│   │   ├── 2024_10_01_000003_create_guru_table.php
+│   │   ├── 2024_10_01_000004_create_staf_table.php
+│   │   ├── 2024_10_01_000005_create_galeri_table.php
+│   │   ├── 2024_10_01_000006_create_kegiatan_table.php
+│   │   ├── 2024_10_01_000007_create_fasilitas_table.php
+│   │   ├── 2024_10_01_000008_create_mitra_table.php
+│   │   ├── 2024_10_01_000009_create_alumni_review_table.php
+│   │   ├── 2024_10_01_000010_create_kontak_table.php
+│   │   ├── 2025_10_16_005653_create_personal_access_tokens_table.php
+│   │   ├── 2025_11_06_000837_update_database_structure_v2.php
+│   │   ├── 2025_11_06_030000_remove_urutan_from_visi_misi.php
+│   │   └── 2025_11_10_000000_remove_tanggal_from_kegiatan.php
+│   └── seeders/
+│       ├── AdminSeeder.php
+│       ├── ProfilSekolahSeeder.php
+│       ├── SejarahSeeder.php
+│       ├── GuruSeeder.php
+│       ├── StafSeeder.php
+│       ├── GaleriSeeder.php
+│       ├── KegiatanSeeder.php
+│       ├── FasilitasSeeder.php
+│       ├── MitraSeeder.php
+│       ├── AlumniReviewSeeder.php
+│       ├── KontakSeeder.php
+│       ├── VisiSeeder.php
+│       ├── MisiSeeder.php
+│       ├── HeroSeeder.php
+│       ├── YayasanSeeder.php
+│       └── DatabaseSeeder.php
+├── public/
+│   ├── index.php
+│   ├── robots.txt
+│   ├── css/
+│   ├── fonts/
+│   └── js/
+├── resources/
+│   ├── css/
+│   ├── js/
+│   └── views/
+│       └── welcome.blade.php
+├── routes/
+│   ├── api.php
+│   ├── console.php
+│   └── web.php
+├── storage/
+│   ├── app/
+│   ├── framework/
+│   └── logs/
+├── docs/
+│   └── DATABASE_STRUCTURE_UPDATE_V2.md
+├── tests/
+│   ├── TestCase.php
+│   ├── Feature/
+│   └── Unit/
+└── vendor/
+    ├── autoload.php
+    └── (composer packages...)
+ 
