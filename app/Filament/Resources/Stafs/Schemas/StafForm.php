@@ -18,8 +18,7 @@ class StafForm
                     ->required(),
                 TextInput::make('jabatan'),
                 Textarea::make('moto')
-                    ->columnSpanFull()
-                    ->required(),
+                    ->columnSpanFull(),
                 FileUpload::make('foto')
                     ->label('Foto Profil Staf')
                     ->image()

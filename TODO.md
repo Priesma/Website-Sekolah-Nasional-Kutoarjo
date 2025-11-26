@@ -1,3 +1,13 @@
+# [IN-PROGRESS] Fix Moto Not Saving
+
+Memperbaiki kolom database dan model agar input Moto tersimpan.
+
+**Tugas:**
+- [ ] DB: Rename `deskripsi` -> `moto` di tabel `guru` dan `staf`.
+- [ ] MODEL: Update `$fillable` di `Guru.php` dan `Staf.php`.
+- [ ] CMD: `php artisan migrate`.
+- [ ] CMD: `php artisan optimize:clear`.
+
 # [IN-PROGRESS] Security Hardening: Auth Validation
 
 Menerapkan standar keamanan pada username dan password untuk area admin.

@@ -54,7 +54,7 @@ class AdminPanelProvider extends PanelProvider
             ->brandName('Admin Website TK/SD Nasional Kutoarjo')
             ->sidebarCollapsibleOnDesktop() // Sidebar bisa dilipat di desktop
             ->brandLogoHeight('3rem') // Mengatur tinggi logo agar proporsional
-            // ->brandLogo(asset('images/logo.png')) // Uncomment jika ingin menambahkan logo custom
+            ->brandLogo(asset('images/Logo TK SD Merged Nasional.png')) // Uncomment jika ingin menambahkan logo custom
             ->middleware([
                 \Illuminate\Cookie\Middleware\EncryptCookies::class,
                 \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
