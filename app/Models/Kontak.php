@@ -22,6 +22,17 @@ class Kontak extends Model
         'admin_id',
     ];
 
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array<int, string>
+     */
+    protected $hidden = [
+        'admin_id',
+        'created_at',
+        'updated_at',
+    ];
+
     public function admin()
     {
         return $this->belongsTo(Admin::class);

@@ -20,6 +20,17 @@ class AlumniReview extends Model
         'admin_id',
     ];
 
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array<int, string>
+     */
+    protected $hidden = [
+        'admin_id',
+        'created_at',
+        'updated_at',
+    ];
+
     protected $casts = [
         'tahun_lulus' => 'integer',
     ];

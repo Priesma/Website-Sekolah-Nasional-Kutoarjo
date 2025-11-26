@@ -7,9 +7,10 @@ use App\Models\Guru;
 
 class PublicGuruController extends Controller
 {
+    protected $model = \App\Models\Guru::class;
     public function index()
     {
-        $data = Guru::select('nama', 'jabatan', 'jenjang', 'deskripsi', 'foto')->get();
+        $data = $this->model::latest()->get();
 
         return response()->json([
             'success' => true,
@@ -20,18 +21,18 @@ class PublicGuruController extends Controller
 
     public function show($id)
     {
-        $data = Guru::select('nama', 'jabatan', 'jenjang', 'deskripsi', 'foto')->find($id);
+        $data = $this->model::find($id);
 
         if (!$data) {
             return response()->json([
                 'success' => false,
-                'message' => 'Data guru tidak ditemukan',
+                'message' => 'Data tidak ditemukan',
             ], 404);
         }
 
         return response()->json([
             'success' => true,
-            'message' => 'Detail guru berhasil diambil',
+            'message' => 'Detail data berhasil diambil',
             'data' => $data
         ], 200);
     }

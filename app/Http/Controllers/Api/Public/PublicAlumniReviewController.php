@@ -7,9 +7,10 @@ use App\Models\AlumniReview;
 
 class PublicAlumniReviewController extends Controller
 {
+    protected $model = \App\Models\AlumniReview::class;
     public function index()
     {
-        $data = AlumniReview::select('nama_alumni', 'tahun_lulus', 'komentar', 'foto')->get();
+        $data = $this->model::latest()->get();
 
         return response()->json([
             'success' => true,
@@ -20,18 +21,18 @@ class PublicAlumniReviewController extends Controller
 
     public function show($id)
     {
-        $data = AlumniReview::select('nama_alumni', 'tahun_lulus', 'komentar', 'foto')->find($id);
+        $data = $this->model::find($id);
 
         if (!$data) {
             return response()->json([
                 'success' => false,
-                'message' => 'Data alumni review tidak ditemukan',
+                'message' => 'Data tidak ditemukan',
             ], 404);
         }
 
         return response()->json([
             'success' => true,
-            'message' => 'Detail alumni review berhasil diambil',
+            'message' => 'Detail data berhasil diambil',
             'data' => $data
         ], 200);
     }

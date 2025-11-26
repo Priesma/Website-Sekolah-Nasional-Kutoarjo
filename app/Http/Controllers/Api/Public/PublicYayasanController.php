@@ -7,9 +7,10 @@ use App\Models\Yayasan;
 
 class PublicYayasanController extends Controller
 {
+    protected $model = \App\Models\Yayasan::class;
     public function index()
     {
-        $data = Yayasan::select('id','nama','deskripsi','gambar')->get();
+        $data = $this->model::get();
 
         return response()->json([
             'success' => true,
@@ -20,16 +21,16 @@ class PublicYayasanController extends Controller
 
     public function show($id)
     {
-        $data = Yayasan::select('id','nama','deskripsi','gambar')->find($id);
+        $data = $this->model::find($id);
         if (!$data) {
             return response()->json([
                 'success' => false,
-                'message' => 'Data yayasan tidak ditemukan'
+                'message' => 'Data tidak ditemukan'
             ], 404);
         }
         return response()->json([
             'success' => true,
-            'message' => 'Detail yayasan berhasil diambil',
+            'message' => 'Detail data berhasil diambil',
             'data' => $data
         ], 200);
     }

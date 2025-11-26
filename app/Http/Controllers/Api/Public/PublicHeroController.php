@@ -7,9 +7,10 @@ use App\Models\Hero;
 
 class PublicHeroController extends Controller
 {
+    protected $model = \App\Models\Hero::class;
     public function index()
     {
-        $data = Hero::select('id','judul','deskripsi','gambar')->get();
+        $data = $this->model::get();
 
         return response()->json([
             'success' => true,
@@ -20,7 +21,7 @@ class PublicHeroController extends Controller
 
     public function show($id)
     {
-        $data = Hero::select('id','judul','deskripsi','gambar')->find($id);
+        $data = $this->model::find($id);
         if (!$data) {
             return response()->json([
                 'success' => false,

@@ -7,9 +7,10 @@ use App\Models\Misi;
 
 class PublicMisiController extends Controller
 {
+    protected $model = \App\Models\Misi::class;
     public function index()
     {
-    $data = Misi::orderBy('id')->get(['id','isi']);
+    $data = $this->model::orderBy('id')->get();
 
         return response()->json([
             'success' => true,
@@ -20,7 +21,7 @@ class PublicMisiController extends Controller
 
     public function show($id)
     {
-    $data = Misi::select('id','isi')->find($id);
+    $data = $this->model::find($id);
         if (!$data) {
             return response()->json([
                 'success' => false,

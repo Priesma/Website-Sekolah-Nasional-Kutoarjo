@@ -7,9 +7,10 @@ use App\Models\Kegiatan;
 
 class PublicKegiatanController extends Controller
 {
+    protected $model = \App\Models\Kegiatan::class;
     public function index()
     {
-        $data = Kegiatan::select('nama_kegiatan', 'deskripsi', 'foto', 'tanggal')->get();
+        $data = $this->model::get();
 
         return response()->json([
             'success' => true,
@@ -20,7 +21,7 @@ class PublicKegiatanController extends Controller
 
     public function show($id)
     {
-        $data = Kegiatan::select('nama_kegiatan', 'deskripsi', 'foto', 'tanggal')->find($id);
+        $data = $this->model::find($id);
 
         if (!$data) {
             return response()->json([

@@ -8,6 +8,20 @@ Memperbaiki kolom database dan model agar input Moto tersimpan.
 - [ ] CMD: `php artisan migrate`.
 - [ ] CMD: `php artisan optimize:clear`.
 
+# [IN-PROGRESS] Add Show API Endpoints
+
+Menambahkan endpoint detail (show by ID) untuk semua resource publik.
+
+**Tugas:**
+- [ ] ROUTE: Tambahkan rute `/{id}` di `api.php`.
+- [ ] CTRL: Tambahkan method `show()` di `PublicGuruController`.
+- [ ] CTRL: Tambahkan method `show()` di `PublicStafController`.
+- [ ] CTRL: Tambahkan method `show()` di `PublicFasilitasController`.
+- [ ] CTRL: Tambahkan method `show()` di `PublicMitraController`.
+- [ ] CTRL: Tambahkan method `show()` di `PublicAlumniReviewController`.
+- [ ] CTRL: Tambahkan method `show()` di `PublicYayasanController`.
+- [ ] CMD: `php artisan optimize:clear`.
+
 # [IN-PROGRESS] Security Hardening: Auth Validation
 
 Menerapkan standar keamanan pada username dan password untuk area admin.

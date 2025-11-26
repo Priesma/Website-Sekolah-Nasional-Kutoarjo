@@ -7,9 +7,10 @@ use App\Models\Staf;
 
 class PublicStafController extends Controller
 {
+    protected $model = \App\Models\Staf::class;
     public function index()
     {
-        $data = Staf::select('nama', 'jabatan', 'deskripsi', 'foto')->get();
+        $data = $this->model::latest()->get();
 
         return response()->json([
             'success' => true,
@@ -20,18 +21,18 @@ class PublicStafController extends Controller
 
     public function show($id)
     {
-        $data = Staf::select('nama', 'jabatan', 'deskripsi', 'foto')->find($id);
+        $data = $this->model::find($id);
 
         if (!$data) {
             return response()->json([
                 'success' => false,
-                'message' => 'Data staf tidak ditemukan',
+                'message' => 'Data tidak ditemukan',
             ], 404);
         }
 
         return response()->json([
             'success' => true,
-            'message' => 'Detail staf berhasil diambil',
+            'message' => 'Detail data berhasil diambil',
             'data' => $data
         ], 200);
     }

@@ -7,9 +7,10 @@ use App\Models\Galeri;
 
 class PublicGaleriController extends Controller
 {
+    protected $model = \App\Models\Galeri::class;
     public function index()
     {
-        $data = Galeri::select('judul', 'kategori', 'gambar')->get();
+        $data = Galeri::latest()->get();
 
         return response()->json([
             'success' => true,
@@ -20,7 +21,7 @@ class PublicGaleriController extends Controller
 
     public function show($id)
     {
-        $data = Galeri::select('judul', 'kategori', 'gambar')->find($id);
+        $data = $this->model::find($id);
 
         if (!$data) {
             return response()->json([

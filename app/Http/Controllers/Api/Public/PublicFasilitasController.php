@@ -7,9 +7,10 @@ use App\Models\Fasilitas;
 
 class PublicFasilitasController extends Controller
 {
+    protected $model = \App\Models\Fasilitas::class;
     public function index()
     {
-        $data = Fasilitas::select('nama_fasilitas', 'deskripsi', 'foto')->get();
+        $data = $this->model::latest()->get();
 
         return response()->json([
             'success' => true,
@@ -20,18 +21,18 @@ class PublicFasilitasController extends Controller
 
     public function show($id)
     {
-        $data = Fasilitas::select('nama_fasilitas', 'deskripsi', 'foto')->find($id);
+        $data = $this->model::find($id);
 
         if (!$data) {
             return response()->json([
                 'success' => false,
-                'message' => 'Data fasilitas tidak ditemukan',
+                'message' => 'Data tidak ditemukan',
             ], 404);
         }
 
         return response()->json([
             'success' => true,
-            'message' => 'Detail fasilitas berhasil diambil',
+            'message' => 'Detail data berhasil diambil',
             'data' => $data
         ], 200);
     }
