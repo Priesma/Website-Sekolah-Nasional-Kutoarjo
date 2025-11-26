@@ -15,7 +15,7 @@ class Guru extends Model
         'nama',
         'jabatan',
         'jenjang',
-        'deskripsi',
+        'moto',
         'foto',
         'admin_id',
     ];

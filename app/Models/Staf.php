@@ -14,7 +14,7 @@ class Staf extends Model
     protected $fillable = [
         'nama',
         'jabatan',
-        'deskripsi',
+        'moto',
         'foto',
         'admin_id',
     ];

@@ -28,9 +28,9 @@ class StafInfolist
                     ->label('Jabatan')
                     ->placeholder('-'),
 
-                TextEntry::make('departemen')
-                    ->label('Departemen')
-                    ->placeholder('-'),
+                // TextEntry::make('departemen')
+                //     ->label('Departemen')
+                //     ->placeholder('-'),
 
                 TextEntry::make('moto')
                     ->label('Moto')
