@@ -33,4 +33,9 @@ class Mitra extends Model
     {
         return $this->belongsTo(Admin::class);
     }
+
+    public function anggota()
+    {
+        return $this->hasMany(AnggotaMitra::class);
+    }
 }

@@ -47,7 +47,7 @@ class MitraResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\AnggotaRelationManager::class,
         ];
     }
 
