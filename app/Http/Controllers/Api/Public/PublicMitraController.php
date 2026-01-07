@@ -10,7 +10,7 @@ class PublicMitraController extends Controller
     protected $model = \App\Models\Mitra::class;
     public function index()
     {
-        $data = $this->model::latest()->get();
+        $data = $this->model::with('anggota')->latest()->get();
 
         return response()->json([
             'success' => true,
@@ -21,7 +21,7 @@ class PublicMitraController extends Controller
 
     public function show($id)
     {
-        $data = $this->model::find($id);
+        $data = $this->model::with('anggota')->find($id);
 
         if (!$data) {
             return response()->json([
